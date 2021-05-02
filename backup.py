@@ -11,7 +11,7 @@ class backup:
     
     def backupTime(self):
         date = datetime.now()
-        if(date.hour == 21):
+        if(date.hour == 21): # time 24-hour clock format
             return True
         else:
             time.sleep(1800)
