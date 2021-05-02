@@ -25,7 +25,7 @@ class backup:
         while True:
             if self.backupTime():
                 self.zipFile("dailyBackup")
-                break
+                time.sleep(3600)
         
 
 if __name__ == "__main__":
