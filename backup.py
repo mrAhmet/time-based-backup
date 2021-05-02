@@ -24,7 +24,7 @@ class backup:
     def backupStart(self):
         while True:
             if self.backupTime():
-                self.zipFile("hurmacinizBackup")
+                self.zipFile("dailyBackup")
                 break
         
 
