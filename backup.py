@@ -11,7 +11,7 @@ class backup:
     
     def backupTime(self):
         date = datetime.now()
-        if("{}".format(date.hour) == "{}".format(21)):
+        if(date.hour == 21):
             return True
         else:
             time.sleep(1800)
