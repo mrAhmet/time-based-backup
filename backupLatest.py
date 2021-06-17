@@ -7,22 +7,20 @@ import ftplib
 class backup:
     def __init__(self):
         # server info
-        self.host = "192.168.1.48"
-        self.user = "hurmaciniz"
-        self.password = "Password1"
+        self.host = "" # ftp server host
+        self.user = "" # ftp server user
+        self.password = "" # ftp server password
 
         # dir info
-        self.savePath = '/Users/ahmet/Desktop/' # zipin kayit edilecek yol
-        #self.filePath = 'C:\Users\pc\Desktop' # yedekelenecek dosyanin yolu
-        #self.filePath2 = 'C:\AKINSOFT'
+        self.savePath = '' # save zip path
 
-        # yedek klasor yollari
-        self.filePath1 = '/Users/ahmet/Desktop/yedek'
-        self.filePath2 = '/Users/ahmet/Desktop/yedek2'
+        # backup paths
+        self.filePath1 = ''
+        self.filePath2 = ''
 
-        # zip isimleri
-        self.zip1 = 'hurmacinizBackup1' 
-        self.zip2 = 'hurmacinizBackup2'
+        # zip names
+        self.zip1 = '' 
+        self.zip2 = ''
         
     def backupTime(self):
         date = datetime.now()
