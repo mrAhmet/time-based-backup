@@ -15,10 +15,11 @@ class backup:
         self.password = ""
 
         # dir info
-        self.filePath1 = r'C:\AKINSOFT'
-        self.filePath2 = r'C:\Users\pc\Desktop'
+        self.filePath1 = r'C:\'
+        self.filePath2 = r'C:\'
         self.tmp = r'C:\Users\pc\AppData\Local\Temp'
-
+        
+        self.lastBackupTime = 5
         
     def backupTime(self):
         date = datetime.now()
@@ -28,7 +29,7 @@ class backup:
         self.desktopStatus = False
         self.akinsoftStatus = False
 
-        lastBackupTime = 5
+        
         
         if bcpTime[0] == "0":
             bcpTime = int(bcpTime[1])
@@ -37,8 +38,9 @@ class backup:
 
         if(date.hour == 9):
             self.akinsoftStatus = True
-            if((bcpTime - lastBackupTime) == 7 or (lastBackupTime - bcpTime) == 7):
+            if((bcpTime - self.lastBackupTime) == 7 or (self.lastBackupTime - bcpTime) == 7):
                 self.desktopStatus = True
+                self.lastBackupTime = bcpTime
         else:
             print("saat bekleniyor.")
             time.sleep(1800)
