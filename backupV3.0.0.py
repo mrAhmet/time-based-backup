@@ -10,9 +10,9 @@ class backup:
 
     def __init__(self):
         # server info
-        self.host = "192.168.1.48"
-        self.user = "hurmaciniz"
-        self.password = "6cb427bf2577947e39671187cd319b44"
+        self.host = ""
+        self.user = ""
+        self.password = ""
 
         # dir info
         self.filePath1 = r'C:\AKINSOFT'
