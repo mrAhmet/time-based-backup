@@ -53,8 +53,8 @@ class backup:
         self.backupTime()
         today = date.today()
 
-        self.zip1 = "%s-akinsoft" % today.strftime("%d.%m.%Y")
-        self.zip2 = "%s-desktop" % today.strftime("%d.%m.%Y")
+        self.zip1 = "%s-dir1" % today.strftime("%d.%m.%Y")
+        self.zip2 = "%s-dir2" % today.strftime("%d.%m.%Y")
 
         if self.akinsoftStatus:
             print("Giriş yapılıyor...")
@@ -83,13 +83,6 @@ class backup:
         bcpFile = open(name,'rb')
         self.conn.storbinary('STOR '+name,bcpFile)
         self.conn.quit()
-
-    # temp dir and server old backup clear
-    def clean(seld):
-        pass
-
-    def main(self):
-        self.backupStart()
 
 if __name__ == '__main__':
     backup = backup()
